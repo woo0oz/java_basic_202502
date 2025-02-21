@@ -32,8 +32,9 @@ public class VaribleExample {
         String str = "야호" ;
         String name = "홍길동" ;
 
+
         int result;
-        System.out.println("result = " + result);
+//        System.out.println("result = " + result);
 
 
     }
