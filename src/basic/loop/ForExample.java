@@ -22,12 +22,14 @@ public class ForExample {
          // 정수를 하나 입력받아서 , 입력받은 정수 까지의 팩토리얼 값을 구하세요
 
         Scanner sc = new Scanner(System.in);
+        System.out.println("값을 입력하세요 : ");
         int num = sc.nextInt();
 
-
-
-
+        int fac = 1; // 팩토리얼 최종값을 담을 변수
+        for (int i = num ; i >= 1 ; i-- ) {
+            fac *= i;
+        }
+        System.out.printf("%d! = %d \n", num, fac);
 
     }
-
 }
