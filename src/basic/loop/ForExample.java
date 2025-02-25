@@ -1,5 +1,7 @@
 package basic.loop;
 
+import java.util.Scanner;
+
 public class ForExample {
     public static void main(String[] args) {
         int total = 0;
@@ -18,6 +20,10 @@ public class ForExample {
         System.out.println("\n");
         //
          // 정수를 하나 입력받아서 , 입력받은 정수 까지의 팩토리얼 값을 구하세요
+
+        Scanner sc = new Scanner(System.in);
+        int num = sc.nextInt();
+
 
 
 
