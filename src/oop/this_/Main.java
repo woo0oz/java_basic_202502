@@ -17,8 +17,13 @@ public class Main {
         Player p2 = new Player("플레이어2");
         System.out.println("p2 주소값 : " +  p2);
 
+        p2.attack(p1);
+        p1.attack(p1);
 
 
+        System.out.println("====================================");
 
+        Player p3 = new Player("플레이어3", 200);
+        System.out.println(p3.toString());
     }
 }
