@@ -1,21 +1,41 @@
 package oop.inter;
 
-// 인터페이스 : 여러 "종류"의 게임 컨트롤러가 반드시 구현해야 하는 메서드를 정의
-//
+// 인터페이스를 구현하는 구현체 클래스는 반드시 모든 추상 메서드를 재정의 해야 합니다.
+// 인터페이스는 동시에 다중 구현도 가능합니다.
+public class JoystickController implements AdvancedController, Vibration {
 
-public interface  JoystickController, Vibration {
-    int NUM = 5;
-    // 인터페이스에서는 상수 로 인식 (static final)
-    // public static final int num = 5 와 동일하다.
-    // 상수는 대문자 로 표기
+    @Override
+    public void moveCharacter(String direction) {
+        System.out.println("조이스틱 " + direction + "키를 눌러 캐릭터 이동");
+    }
 
-    //인터페이스는 생성자를 가질 수 없음 (객체화 될 수 없는 개념)
+    @Override
+    public void action() {
+        System.out.println("조이스틱 A 버튼을 눌러 행동 수행");
+    }
 
-    // 추상 메서드
-    // abstract 를 굳이 안붙여도 컴파일 과정에서 붙여줌
-    void moveCharacter(String direction) ; // 이런 메소드가 있을거야 ~ 라는 틀만 제공
-    void action();
-    void pause();
+    @Override
+    public void pause() {
+        System.out.println("조이스틱 start 버튼을 눌러 게임 일시 정지");
+    }
 
+    @Override
+    public void vibrate(int intensity) {
+        System.out.println(intensity + "강도로 진동 조정");
+    }
 
+    @Override
+    public void offVibrate() {
+        System.out.println("진동이 꺼집니다.");
+    }
+
+    @Override
+    public void specialAction() {
+
+    }
+
+    @Override
+    public void customizeButton(String config) {
+
+    }
 }
